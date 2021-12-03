@@ -10,7 +10,7 @@
   * /docs/EY.postman_collection.json
   * (createTables, listUsers, createUser, createUser - Error Email, createUser - Error PW, decodeJWT, getUserById, deleteUserById, updateUser)
 
-* Para inicar desde el API la base de datos, ejecutar de la colelcion de postam
+* Para inicar desde el API la base de datos, no es necesario ejecutar scrips de SQL, en su lugar, usar de la collecion de postman:
 POST http://localhost:8080/v1/createTables
 
 * Script creacion Tabla User
