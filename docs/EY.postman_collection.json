@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "c66fdebd-56dc-4d3b-a87a-3d641d8be6a6",
+		"name": "EY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTables",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/createTables",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"createTables"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Juan Rodriguez\",\n    \"email\": \"juan.rodriguez@dominio.cl\",\n    \"password\": \"Hunter22\",\n    \"phones\": [\n        {\n            \"number\": \"1234567\",\n            \"citycode\": \"1\",\n            \"contrycode\": \"57\"\n        },\n        {\n            \"number\": \"123456789\",\n            \"citycode\": \"1\",\n            \"contrycode\": \"57\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser - Error Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Error\",\n    \"email\": \"​juan@rodriguez.org​\",\n    \"password\": \"hunter2\",\n    \"phones\": [\n        {\n            \"number\": \"1234567\",\n            \"citycode\": \"1\",\n            \"contrycode\": \"57\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser - Error PW",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Error\",\n    \"email\": \"​juan@rodriguez.cl\",\n    \"password\": \"hunter2\",\n    \"phones\": [\n        {\n            \"number\": \"1234567\",\n            \"citycode\": \"1\",\n            \"contrycode\": \"57\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decodeJWT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"8adf2ac6dda84d21a0ede681b3e4c62b\",\n    \"created\": \"02-12-2021\",\n    \"modified\": \"02-12-2021\",\n    \"lastLogin\": \"02-12-2021\",\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwMSIsImlhdCI6MTYzODQ2NjgyNSwic3ViIjoianVhbi5yb2RyaWd1ZXpAZG9taW5pby5jbCIsImlzcyI6ImV5IiwiZXhwIjoxNjM5NDY2ODI1fQ.zfBUa4JU-jko3AWejbrYK74gX6dy-2vnlxgGUQeAHko\",\n    \"isActive\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/decodeJWT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"decodeJWT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/getUserById/823df89900a44769b9f5ef01245545be",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"getUserById",
+						"823df89900a44769b9f5ef01245545be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/deleteUserById/823df89900a44769b9f5ef01245545be",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"deleteUserById",
+						"823df89900a44769b9f5ef01245545be"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"823df89900a44769b9f5ef01245545be\",\n    \"name\": \"Juan Rodriguez\",\n    \"email\": \"juan.rodriguez11223456@dominio.cl\",\n    \"password\": \"Hunter22\",\n    \"isactive\": \"true\",\n    \"phones\": [\n        {\n            \"number\": \"1234567\",\n            \"citycode\": \"1\",\n            \"contrycode\": \"57\"\n        },\n        {\n            \"number\": \"123456789\",\n            \"citycode\": \"1\",\n            \"contrycode\": \"57\"\n        },\n        {\n            \"number\": \"123\",\n            \"citycode\": \"1\",\n            \"contrycode\": \"57\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/updateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"updateUser"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

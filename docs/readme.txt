@@ -5,14 +5,14 @@
 
 * Para conectarse la DB (ejecutar en consola, en el directorio /hsqldb-2.6.1/hsqldb/data):
   java -cp ../lib/hsqldb.jar org.hsqldb.util.DatabaseManagerSwing
-  
+
 * Collecion de todas las operaciones para POSTMAN ( * Recomendado Importarla )
   * /docs/EY.postman_collection.json
   * (createTables, listUsers, createUser, createUser - Error Email, createUser - Error PW, decodeJWT, getUserById, deleteUserById, updateUser)
-  
-* Para inicar desde el API la base de datos, ejecutar de la colelcion de postam 
+
+* Para inicar desde el API la base de datos, ejecutar de la colelcion de postam
 POST http://localhost:8080/v1/createTables
-  
+
 * Script creacion Tabla User
   CREATE TABLE user (
   id VARCHAR (45) NOT NULL,
